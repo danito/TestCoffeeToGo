@@ -17,4 +17,8 @@
     <string name="empty_url">Known Url must be filled in</string>
     <string name="settings_saved">Settngs saved</string>
     <string name="all_saved">settings saved</string>
+    <string name="empty_hash">Could\'nt create hash value</string>
+    <string name="noNetwork">No network connection found</string>
+    <string name="networkOk">NETWORK FOUND</string>
+    <string name="services">Syndication Services</string>
 </resources>
