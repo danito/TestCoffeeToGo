@@ -21,4 +21,9 @@
     <string name="noNetwork">No network connection found</string>
     <string name="networkOk">NETWORK FOUND</string>
     <string name="services">Syndication Services</string>
+    <string name="retrievedata">Retrieving data...</string>
+    <string name="set_edit">edit</string>
+    <string name="dial_username">Edit username</string>
+    <string name="alert_dialog">Edit connection values</string>
+    <string name="cancel">Cancel</string>
 </resources>
