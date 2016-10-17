@@ -279,6 +279,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Dialog onCreateDialog(Bundle savedinstanceState) {
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(R.string.dial_username);
             builder.setMessage(R.string.ueber_text)
                     .setPositiveButton(R.string.ok, new
                             DialogInterface.OnClickListener(){
@@ -309,7 +310,23 @@ public class MainActivity extends AppCompatActivity {
         am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 1000*60*60*24, pi);
     }
 
-    public void cancelAlarm(Context context){
+    public static class UeberDialog extends DialogFragment {
+        @Override
+        public Dialog onCreateDialog(Bundle savedinstanceState) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(R.string.dial_username);
+            builder.setMessage(R.string.ueber_text)
+                    .setPositiveButton(R.string.ok, new
+                            DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dismiss();
+                                }
+                            });
+            return builder.create();
+        }
+    }
+
+    public void cancelAlarm(Context context) {
         Intent intent = new Intent(context, Erinnerung.class);
         PendingIntent sender  = PendingIntent.getBroadcast(context,0,intent,0);
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
